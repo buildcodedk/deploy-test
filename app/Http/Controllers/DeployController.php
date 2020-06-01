@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Symfony\Component\Process\Process;
 
-class UtilController extends Controller
+class DeployController extends Controller
 {
     public function deploy(Request $request)
     {
