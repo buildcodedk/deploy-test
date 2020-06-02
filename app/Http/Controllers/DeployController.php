@@ -17,7 +17,7 @@ class DeployController extends Controller
 
         if (hash_equals($githubHash, $localHash)) {
             $root_path = base_path();
-            $process = new Process::fromShellCommandline('cd ' . $root_path . '; ./deploy.sh');
+            $process = Process::fromShellCommandline('cd ' . $root_path . '; ./deploy.sh');
             $process->run(function ($type, $buffer) {
                 echo $buffer;
             });
